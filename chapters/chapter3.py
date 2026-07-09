@@ -1,0 +1,20 @@
+def start():
+    print()
+    print("=== Chapter 3: 연산자(operator) ===")
+    print()
+    print("[개념 설명]")
+    print("연산자는 값을 계산하거나 비교할 때 사용합니다.")
+    print("+ - * / 는 사칙연산, == != > < 는 비교 연산자입니다.")
+    print()
+    print("[예제 실행]")
+    a = 10
+    b = 3
+    print("a =", a, ", b =", b)
+    print("a + b =", a + b)
+    print("a - b =", a - b)
+    print("a * b =", a * b)
+    print("a / b =", a / b)
+    print("a == b :", a == b)
+    print("a > b  :", a > b)
+    print()
+    input("엔터를 누르면 메뉴로 돌아갑니다...")

@@ -1,0 +1,13 @@
+def start():
+    print()
+    print("=== Chapter 2: 입력(input) ===")
+    print()
+    print("[개념 설명]")
+    print("input() 함수는 사용자로부터 키보드 입력을 받습니다.")
+    print("입력받은 값은 항상 문자열(str) 형태로 저장됩니다.")
+    print()
+    print("[예제 실행]")
+    user_name = input("이름을 입력하세요: ")
+    print("안녕하세요,", user_name, "님!")
+    print()
+    input("엔터를 누르면 메뉴로 돌아갑니다...")
