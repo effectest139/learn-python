@@ -2,12 +2,10 @@
 # 연산자를 배우는 학습 챕터
 
 
-# 사용자가 엔터를 누르면 다음 단계로 넘어가는 함수
 def wait_next():
     input("\n엔터를 누르면 다음 단계로 넘어갑니다...")
 
 
-# 개념 설명 부분
 def explain():
     print()
     print("=== Chapter 3 : 연산자(operator) ===")
@@ -28,11 +26,10 @@ def explain():
 
     print("다른 문법과 함께 사용하여 조건문과 반복문을 만들 수 있습니다.")
     print("예 : if score >= 60: print('합격')")
-    
+
     wait_next()
 
 
-# 예제 1 설명
 def example1():
     print()
     print("=== 예제 1 ===")
@@ -55,7 +52,6 @@ def example1():
     wait_next()
 
 
-# 사용자가 직접 코드를 따라 작성하는 단계
 def example2():
     print()
     print("=== 따라하기 ===")
@@ -70,15 +66,12 @@ def example2():
 
     while True:
         answer = input("코드 입력 : ")
-
-        # 공백 차이를 무시하기 위한 처리
         answer = answer.replace(" ", "")
 
         if answer == "print(20-7)":
             print()
             print("정답입니다!")
             break
-
         else:
             print("다시 시도해보세요.")
             print("힌트 : 연산자 '-'를 확인하세요.")
@@ -86,7 +79,6 @@ def example2():
     wait_next()
 
 
-# 마지막 실습 문제
 def practice():
     print()
     print("=== 최종 실습 ===")
@@ -95,28 +87,28 @@ def practice():
     print("문제:", end=' ')
     print("가로 길이(width) 5와 세로 길이(height) 8을 변수에 저장하고")
     print("가로 길이와 세로 길이를 곱하여 넓이(area)를 계산하고 출력하세요.")
-    print("(줄바꿈은' \ '기호를 사용하세요)")
+    print("(줄바꿈은 ' \\ ' 기호를 사용하세요)")
     print()
     print("40")
     print()
 
+    answer1 = r'width=5\height=8\area=width*height\print(area)'
+    answer2 = r'width=5\height=8\print(width*height)'
+
     while True:
         answer = input("작성한 코드를 입력하세요 : ")
-
         answer = answer.replace(" ", "")
 
-        if answer == "width=5\height=8\area=width*height\print(area)" or answer == "width=5\height=8\print(width*height)":
+        if answer == answer1 or answer == answer2:
             print()
             print("정답입니다!")
             print("Chapter 3 완료!")
             break
-
         else:
             print()
             print("정답이 아닙니다.")
 
             hint = input("힌트가 필요하면 h를 입력하세요 : ")
-
             if hint.lower() == "h":
                 print()
                 print("[힌트]")
@@ -125,20 +117,10 @@ def practice():
                 print("넓이 변수를 area로 지정하고, print() 함수를 사용하여 출력하세요.")
 
 
-# 챕터 실행 함수
-# main.py에서 이 함수를 호출합니다.
 def start():
-
-    # 1. 개념 설명
     explain()
-
-    # 2. 예제 확인
     example1()
-
-    # 3. 따라하기
     example2()
-
-    # 4. 실습
     practice()
 
     print()
