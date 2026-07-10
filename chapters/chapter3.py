@@ -25,7 +25,7 @@ def explain():
     print()
 
     print("다른 문법과 함께 사용하여 조건문과 반복문을 만들 수 있습니다.")
-    print("예 : if score >= 60: print('합격')")
+    print("예 : if score >= 60:\n   print('합격')")
 
     wait_next()
 

@@ -113,7 +113,7 @@ def practice():
     print("양수")
     print()
 
-    target = r"number=int(input('숫자를입력하세요:'))\ifnumber>0:\print('양수')\else:\print('음수또는0')"
+    target = r"number=int(input())\ifnumber>0:\print('양수')\else:\print('음수또는0')"
 
     while True:
         answer = input("작성한 코드를 입력하세요 : ")
