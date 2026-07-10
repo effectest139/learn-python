@@ -73,7 +73,7 @@ def example2():
         # 공백 차이를 무시하기 위한 처리
         answer = answer.replace(" ", "")
 
-        if answer == "print('첫 파이썬 프로그램입니다.')" or answer == 'print("첫 파이썬 프로그램입니다."")':
+        if answer == "print('첫파이썬프로그램입니다.')" or answer == 'print("첫파이썬프로그램입니다."")':
             print()
             print("정답입니다!")
             break

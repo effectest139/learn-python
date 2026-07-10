@@ -75,7 +75,7 @@ def example2():
         # 공백 차이를 무시하기 위한 처리
         answer = answer.replace(" ", "")
 
-        if answer == "name = input('이름을 입력하세요: ')\print('환영합니다,', name)":
+        if answer == "name=input('이름을입력하세요:')\print('환영합니다,',name)":
             print()
             print("정답입니다!")
             break
@@ -106,7 +106,7 @@ def practice():
 
         answer = answer.replace(" ", "")
 
-        if answer == "fruit = input()\print(fruit)":
+        if answer == "fruit=input()\print(fruit)":
             print()
             print("정답입니다!")
             print("Chapter 2 완료!")

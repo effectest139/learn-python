@@ -74,7 +74,7 @@ def example2():
         # 공백 차이를 무시하기 위한 처리
         answer = answer.replace(" ", "")
 
-        if answer == "name = 'snake'" or answer == 'name = "snake"':
+        if answer == "name='snake'"or answer == 'name="snake"':
             print()
             print("정답입니다!")
             break
@@ -104,7 +104,7 @@ def practice():
 
         answer = answer.replace(" ", "")
 
-        if answer == "num = 10\print(num)":
+        if answer == "num=10\print(num)":
             print()
             print("정답입니다!")
             print("Chapter 1 완료!")
