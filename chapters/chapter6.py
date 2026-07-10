@@ -1,6 +1,8 @@
 # Chapter 6 : 함수(function)
 # def를 사용하여 함수를 만들고 호출하는 학습 챕터
 
+from exp_manager import add_exp
+
 
 # 사용자가 엔터를 누르면 다음 단계로 넘어가는 함수
 def wait_next():
@@ -99,6 +101,7 @@ def example2():
         if answer == target:
             print()
             print("정답입니다!")
+            add_exp(5)
             break
 
         else:
@@ -132,6 +135,7 @@ def practice():
         if answer == target:
             print()
             print("정답입니다!")
+            add_exp(15)
             print("Chapter 6 완료!")
             break
 

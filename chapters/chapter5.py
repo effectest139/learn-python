@@ -1,6 +1,8 @@
 # Chapter 5 : 반복문(loop)
 # while문을 사용하여 반복 실행을 배우는 학습 챕터
 
+from exp_manager import add_exp
+
 
 # 사용자가 엔터를 누르면 다음 단계로 넘어가는 함수
 def wait_next():
@@ -103,6 +105,7 @@ def example2():
         if answer == target:
             print()
             print("정답입니다!")
+            add_exp(5)
             break
 
         else:
@@ -138,6 +141,7 @@ def practice():
         if answer == answer1 or answer == answer2:
             print()
             print("정답입니다!")
+            add_exp(15)
             print("Chapter 5 완료!")
             break
 

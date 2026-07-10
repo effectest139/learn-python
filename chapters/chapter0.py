@@ -1,6 +1,8 @@
 # Chapter 0 : 출력(print)
 # print() 함수를 배우는 학습 챕터
 
+from exp_manager import add_exp
+
 
 def wait_next():
     input("\n엔터를 누르면 다음 단계로 넘어갑니다...")
@@ -70,6 +72,7 @@ def example2():
         if answer == "print('첫파이썬프로그램입니다.')" or answer == 'print("첫파이썬프로그램입니다.")':
             print()
             print("정답입니다!")
+            add_exp(5)
             break
         else:
             print("다시 시도해보세요.")
@@ -96,6 +99,7 @@ def practice():
         if answer == "print('파이썬은재미있다!')" or answer == 'print("파이썬은재미있다!")':
             print()
             print("정답입니다!")
+            add_exp(15)
             print("Chapter 0 완료!")
             break
         else:
