@@ -44,7 +44,7 @@ def example1():
     print("print('Hello, Python!')")
     print()
 
-    print("실행 결과:")
+    print("실행 결과:", end=' ')
     print("Hello, Python!")
     print()
 
@@ -60,11 +60,11 @@ def example2():
     print("=== 따라하기 ===")
     print()
 
-    print("목표 출력: ", end='')
-    print("파이썬 학습을 시작합니다.")
+    print("코드: ", end='')
+    print("print('첫 파이썬 프로그램입니다.')")
     print()
 
-    print("위 문장이 출력되도록 코드를 작성하세요.")
+    print("위 문장을 똑같이 작성하세요.")
     print()
 
     while True:
@@ -73,14 +73,14 @@ def example2():
         # 공백 차이를 무시하기 위한 처리
         answer = answer.replace(" ", "")
 
-        if answer == "print('파이썬학습을시작합니다.')" or answer == 'print("파이썬학습을시작합니다.")':
+        if answer == "print('첫 파이썬 프로그램입니다.')" or answer == 'print("첫 파이썬 프로그램입니다."")':
             print()
             print("정답입니다!")
             break
 
         else:
             print("다시 시도해보세요.")
-            print("힌트 : print() 함수 안에 문장을 넣습니다.")
+            print("힌트 : 따옴표를 확인하세요")
 
     wait_next()
 
