@@ -19,7 +19,7 @@ STEPS = [
         "body": "코드:\nworld = 'Hello, World!'\nprint(world)\n\n"
                 "실행 결과: Hello, World!\n\n"
                 "설명:\n변수 world에 문자열 'Hello, World!'를 저장하고, "
-                "print() 함수를 사용하여 그 값을 출력합니다.",
+                "\nprint() 함수를 사용하여 그 값을 출력합니다.",
     },
     {
         "type": "quiz",
@@ -41,7 +41,7 @@ STEPS = [
         "answers": [
             r"num=10\print(num)",
         ],
-        "hint": "print() 함수를 사용하고 변수를 만들 때는 변수이름 = 저장할값 형태로 작성합니다.",
+        "hint": "print() 함수를 사용하고 변수를 만들 때는 \n변수이름 = 저장할값 형태로 작성합니다.",
         "exp": 15,
     },
 ]

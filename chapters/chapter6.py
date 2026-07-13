@@ -23,7 +23,7 @@ STEPS = [
         "body": "코드:\ndef function():\n    print(\"Hello, World!\")\n\nfunction()\n\n"
                 "실행 결과: Hello, World!\n\n"
                 "설명:\ndef function(): 으로 function이라는 이름의 함수를 정의합니다. "
-                "function() 처럼 함수 이름 뒤에 괄호를 붙여 호출하면, 함수 안에 작성된 코드가 그때 실행됩니다.",
+                "\nfunction() 처럼 함수 이름 뒤에 괄호를 붙여 호출하면, \n함수 안에 작성된 코드가 그때 실행됩니다.",
     },
     {
         "type": "quiz",
@@ -48,7 +48,7 @@ STEPS = [
             r"defadd_numbers(a,b):\returna+b\result=add_numbers(3,7)\print(result)",
         ],
         "hint": "def add_numbers(a, b): 형태로 함수를 정의하고, return a + b로 합을 돌려주세요. "
-                "result = add_numbers(3, 7)로 호출하고 print(result)로 출력하세요.",
+                "\nresult = add_numbers(3, 7)로 호출하고 print(result)로 출력하세요.",
         "exp": 15,
     },
 ]

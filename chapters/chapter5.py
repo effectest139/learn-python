@@ -24,7 +24,7 @@ STEPS = [
                 "        break\n\n"
                 "실행 결과:\nHello, World!\nHello, World!\nHello, World!\n\n"
                 "설명:\nwhile True는 조건이 항상 참이므로 무한히 반복됩니다. "
-                "count가 1씩 증가하다가 3이 되면 if문 조건이 참이 되어 break가 실행되고 반복문이 종료됩니다.",
+                "\ncount가 1씩 증가하다가 3이 되면 if문 조건이 참이 되어 \nbreak가 실행되고 반복문이 종료됩니다.",
     },
     {
         "type": "quiz",
@@ -49,7 +49,7 @@ STEPS = [
             r"count=1\whileTrue:\print(count)\count+=1\ifcount>3:\break",
         ],
         "hint": "count 변수를 1로 초기화하세요. while count <= 3: 조건으로 반복문을 만드세요. "
-                "반복문 안에서 count를 출력하고, count += 1로 값을 증가시키세요.",
+                "\n반복문 안에서 count를 출력하고, count += 1로 값을 증가시키세요.",
         "exp": 15,
     },
 ]

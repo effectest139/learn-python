@@ -11,6 +11,10 @@ class ChapterFrame(tk.Frame):
         self.step_index = 0
         self.on_finish = on_finish
 
+        # 경험치를 이미 지급한 퀴즈 단계의 인덱스 모음
+        # '이전' 버튼으로 되돌아가서 같은 퀴즈를 다시 맞혀도 중복 지급을 막기 위함
+        self.completed_steps = set()
+
         self.title_label = tk.Label(self, font=("맑은 고딕", 14, "bold"))
         self.title_label.pack(pady=10)
 
@@ -22,21 +26,34 @@ class ChapterFrame(tk.Frame):
         self.feedback_label = tk.Label(self, text="")
         self.feedback_label.pack()
 
-        self.next_button = tk.Button(self)
+        # 하단 네비게이션 바 : 메뉴 | 이전 | 다음/제출
+        self.nav_frame = tk.Frame(self)
+        self.nav_frame.pack(side="bottom", pady=15)
+
+        self.menu_button = tk.Button(self.nav_frame, text="메뉴", command=self.go_to_menu)
+        self.menu_button.pack(side="left", padx=5)
+
+        self.prev_button = tk.Button(self.nav_frame, text="이전", command=self.prev_step)
+        self.prev_button.pack(side="left", padx=5)
+
+        self.next_button = tk.Button(self.nav_frame)
+        self.next_button.pack(side="left", padx=5)
+
         self.show_step()
 
     def show_step(self):
         self.entry.pack_forget()
-        self.next_button.pack_forget()
         self.feedback_label.config(text="")
 
         step = self.steps[self.step_index]
         self.title_label.config(text=step["title"])
 
+        # 첫 단계에서는 더 이전으로 갈 수 없으므로 '이전' 버튼 비활성화
+        self.prev_button.config(state=("disabled" if self.step_index == 0 else "normal"))
+
         if step["type"] == "explain":
             self.body_label.config(text=step["body"])
             self.next_button.config(text="다음", command=self.next_step)
-            self.next_button.pack(pady=10)
 
         elif step["type"] == "quiz":
             self.body_label.config(text=step["prompt"])
@@ -44,7 +61,6 @@ class ChapterFrame(tk.Frame):
             self.entry.pack(pady=5)
 
             self.next_button.config(text="제출", command=self.check_answer)
-            self.next_button.pack(pady=10)
 
     def next_step(self):
         self.step_index = self.step_index + 1
@@ -54,14 +70,24 @@ class ChapterFrame(tk.Frame):
         else:
             self.show_step()
 
+    def prev_step(self):
+        if self.step_index > 0:
+            self.step_index = self.step_index - 1
+            self.show_step()
+
+    def go_to_menu(self):
+        self.on_finish()
+
     def check_answer(self):
         step = self.steps[self.step_index]
         answer = self.entry.get()
         answer = answer.replace(" ", "")
 
         if answer in step["answers"]:
-            add_exp(step["exp"])
+            if self.step_index not in self.completed_steps:
+                add_exp(step["exp"])
+                self.completed_steps.add(self.step_index)
             self.feedback_label.config(text="정답입니다!", fg="green")
             self.next_step()
         else:
-            self.feedback_label.config(text="다시 시도해보세요. 힌트: " + step["hint"], fg="red")
+            self.feedback_label.config(text="다시 시도해보세요. \n힌트: " + step["hint"], fg="red")

@@ -44,7 +44,7 @@ STEPS = [
             r"fruit=input()\print(fruit)",
             r"fruit=input('좋아하는과일을입력하세요:')\print(fruit)",
         ],
-        "hint": "input() 함수를 사용하여 사용자로부터 데이터를 입력받고 출력은 print() 함수를 사용합니다.",
+        "hint": "input() 함수를 사용하여 사용자로부터 \n데이터를 입력받고 출력은 print() 함수를 사용합니다.",
         "exp": 15,
     },
 ]
